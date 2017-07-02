@@ -1,0 +1,10 @@
+#!/bin/sh
+
+docker rm -f crond
+docker run -d \
+  --name crond \
+  -v /var/run/docker.sock:/var/run/docker.sock:ro \
+  -v data-crond:/etc/crontabs \
+  -m 32M \
+  --restart=always \
+  jeboehm/cron:latest

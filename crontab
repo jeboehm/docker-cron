@@ -1,0 +1,9 @@
+#!/bin/sh
+
+docker run \
+  --volumes-from crond \
+  -m 32M \
+  --entrypoint crontab \
+  -it --rm \
+  jeboehm/cron:latest \
+  "$@"
