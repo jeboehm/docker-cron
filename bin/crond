@@ -6,5 +6,6 @@ docker run -d \
   -v /var/run/docker.sock:/var/run/docker.sock:ro \
   -v crond-data:/etc/crontabs \
   -m 32M \
+  --net=none \
   --restart=always \
   jeboehm/cron:latest
