@@ -4,7 +4,6 @@
 test:
 	docker build -t jeboehm/cron:latest .
 	bin/crond
-  docker run --name test -e CRON_STARTTIME="* * * * *" busybox
-	sleep 5
+	docker run --name tst -e CRON_STARTTIME="* * * * *" busybox
 	sh -x ./test.sh
-	docker rm -f crond test
+	docker rm -f crond tst
