@@ -3,6 +3,7 @@
 docker run \
   --volumes-from crond \
   -m 32M \
+  --net=none \
   --entrypoint crontab \
   -it --rm \
   jeboehm/cron:latest \
