@@ -1,6 +1,8 @@
 jeboehm/cron
 ===========
 
+[![Build Status](https://travis-ci.org/jeboehm/docker-cron.svg?branch=master)](https://travis-ci.org/jeboehm/docker-cron)
+
 jeboehm/cron is able to start your existing Docker containers periodically. It
 uses docker-gen to create the crontab and reads the container's `CRON_STARTTIME`
 environment variable.
